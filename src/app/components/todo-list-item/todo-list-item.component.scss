@@ -1,0 +1,9 @@
+.complete {
+  text-decoration: line-through;
+}
+
+.todo-list-item {
+  display: grid;
+  grid-template-columns: 3em 1fr 5em;
+  line-height: 2en;
+}
