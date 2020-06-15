@@ -2,7 +2,7 @@
   <div class="draghandle">
     <mat-icon>drag_indicator</mat-icon>
   </div>
-  <mat-checkbox type="checkbox" [(ngModel)]="todo.completed"></mat-checkbox>
+  <mat-checkbox type="checkbox" [(ngModel)]="todo.completed" (change)="toggle(todo)"></mat-checkbox>
   <label [ngClass]="{complete: todo.completed}">{{ todo.title }}</label>
   <button mat-icon-button class="delete" (click)="delete(todo)">
     <mat-icon>delete</mat-icon>

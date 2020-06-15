@@ -2,6 +2,6 @@
   <div
     *ngFor="let todo of todos"
     cdkDrag>
-    <app-todo-list-item (deleteTodo)="delete($event)" [todo]="todo"></app-todo-list-item>
+    <app-todo-list-item (deleteTodo)="delete($event)" [todo]="todo" (itemChanged)="itemChange($event)"></app-todo-list-item>
   </div>
 </div>

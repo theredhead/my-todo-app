@@ -18,6 +18,10 @@ export class TodoListComponent{
     this.deleteTodo.emit(todo);
   }
 
+  itemChange(todo: Todo) {
+    this.changed.emit(this.todos);
+  }
+
   drop(event: CdkDragDrop<Todo[]>) {
     console.log('dropped', event);
     moveItemInArray(this.todos, event.previousIndex, event.currentIndex);
