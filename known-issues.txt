@@ -1,0 +1,8 @@
+Two issues are left intentionally at this point. Let's see if we can solve them!
+
+- It is possible to add a todo item without text
+  place an [enabled] directive on the add button that only enables if there is some text in the textbox
+
+- Todo items that have their completed status topggled do not persist until something else changes in the list.
+  emit an event from the list item view, through the list view to the application component to tell the service to
+  persists the change
