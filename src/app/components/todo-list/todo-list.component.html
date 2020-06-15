@@ -1,5 +1,7 @@
-<div>
-  <div *ngFor="let todo of todos">
+<div cdkDropList (cdkDropListDropped)="drop($event)">
+  <div
+    *ngFor="let todo of todos"
+    cdkDrag>
     <app-todo-list-item (deleteTodo)="delete($event)" [todo]="todo"></app-todo-list-item>
   </div>
 </div>

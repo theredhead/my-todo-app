@@ -14,8 +14,4 @@ export class TodoListItemComponent {
   delete(todo) {
     this.deleteTodo.emit(todo);
   }
-
-  toggle(todo: Todo) {
-    todo.completed = ! todo.completed;
-  }
 }

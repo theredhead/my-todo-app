@@ -23,6 +23,9 @@ export class AppComponent implements OnInit {
   deleteTodoItem(todo: Todo) {
     this.todoService.deleteTodoItem(todo);
   }
+  todosChanged(todos: Todo[]) {
+    this.todoService.todos = todos;
+  }
 
   ngOnInit() {
     this.todos = this.todoService.todos;

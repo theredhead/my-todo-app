@@ -1,5 +1,10 @@
 <div class="todo-list-item">
-  <input type="checkbox" [checked]="todo.completed" (click)="toggle(todo)" />
+  <div class="draghandle">
+    <mat-icon>drag_indicator</mat-icon>
+  </div>
+  <mat-checkbox type="checkbox" [(ngModel)]="todo.completed"></mat-checkbox>
   <label [ngClass]="{complete: todo.completed}">{{ todo.title }}</label>
-  <button class="delete" (click)="delete(todo)">x</button>
+  <button mat-icon-button class="delete" (click)="delete(todo)">
+    <mat-icon>delete</mat-icon>
+  </button>
 </div>
