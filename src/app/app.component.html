@@ -10,7 +10,7 @@
   <input matInput type="text" [(ngModel)]="newTodoItemText" placeholder="New item text" />
 </mat-form-field>
 
-<button mat-icon-button (click)="addTodo()">
+<button mat-icon-button (click)="addTodo()" [disabled]="newTodoItemText == ''">
   <mat-icon>add</mat-icon>
 </button>
 
